@@ -1,5 +1,7 @@
-
+h5py
+PIL
 cv2
 matplotlib
-numpytensorflow
+tensorflow
 numpy
+streamlit
