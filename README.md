@@ -33,6 +33,14 @@ The Last cell will give you result
 
 *********************************************************************************************************************************************
 --------------------------------------------------------------------------------------------------------------------------------------------
+Edit:   31 August 2023
+So after spending some time on thinking about making web app I finally made one. And here is its working.
+
+I tried to make a live web app that could classify the tumor easily. I achieved this by using a robust library of Python named Streamlit; I created a personal server on my laptop.
+Then adjust the location of my_model according to the PC config.
+To run the web app, go to cmd prompt/windows Powershell and move the working directory to the folder in which this folder is located, and write the command 
+"Streamlit run main.py"   this will enable a temporary live server over the PC and we can test it from there.
+
 *********************************************************************************************************************************************
 
 
