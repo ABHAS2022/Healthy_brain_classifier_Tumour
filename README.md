@@ -1,47 +1,55 @@
-# Healthy_brain_classifier_Tumour
+# Brain Tumor Classification
 
-This is a jupyter notebook made on google colab showing the steps in it to determine whether a mri scan has brain tumour or not
+This repository provides a complete pipeline for classifying brain tumors using MRI scans. The project includes a Jupyter Notebook for model training and evaluation, as well as a Streamlit web app for live predictions.
 
-It is trained using the brain tummour classification dataset present on Kaggle
-so it shows the complete process and another one file attached is the tensorflow model that i have saved from this jupyter notebook in .h5 format
+## Project Overview
 
-To run this model kindly do install the libraries present in requirements.txt
+### Jupyter Notebook
 
-1)
-OR go to command Prompt do  " pip install requirement.txt"
-2)
-now download/clone the whole repository in your device 
-3)
-Open run.ipynb present
-4) 
-Now give the path of the downloaded model in .ipynb file
-5) 
-Now give the path image of the mri scan in the bracket of cv2.imread().  (inside the apostrophy) (if using personal machine do use double backslash "\"
-between the branches)
-"
-img = cv2.imread('/content/OIP.jpg')
-plt.imshow(img)
+1. **Training and Evaluation**: The notebook demonstrates the steps to train a brain tumor classification model using the Brain Tumor Classification dataset from Kaggle.
+2. **Saved Model**: The trained TensorFlow model is saved in `.h5` format for easy deployment.
 
-"
-6)
-Now run all the cells orderwise as set in the run.ipynb
-7)
-The Last cell will give you result
+### How to Use
 
+1. **Install Dependencies**:
+   - Install the required libraries by running:
+     ```bash
+     pip install -r requirements.txt
+     ```
 
+2. **Download and Set Up**:
+   - Clone or download the repository to your local device.
+   - Open the `run.ipynb` file in Jupyter Notebook.
 
+3. **Configuration**:
+   - Set the path to the saved model in the `.ipynb` file.
+   - Update the path of the MRI scan image in the `cv2.imread()` function:
+     ```python
+     img = cv2.imread('/path/to/image.jpg')  # Use double backslashes "\\" for personal machines
+     plt.imshow(img)
+     ```
 
-*********************************************************************************************************************************************
---------------------------------------------------------------------------------------------------------------------------------------------
-Edit:   31 August 2023
-So after spending some time on thinking about making web app I finally made one. And here is its working.
+4. **Execution**:
+   - Run all cells in order to process the MRI scan and obtain the classification result.
 
-I tried to make a live web app that could classify the tumor easily. I achieved this by using a robust library of Python named Streamlit; I created a personal server on my laptop.
-Then adjust the location of my_model according to the PC config.
-To run the web app, go to cmd prompt/windows Powershell and move the working directory to the folder in which this folder is located, and write the command 
-"Streamlit run main.py"   this will enable a temporary live server over the PC and we can test it from there.
+### Streamlit Web App
 
-*********************************************************************************************************************************************
+To make the model accessible via a web interface:
 
+1. **Setup**:
+   - Ensure that the required libraries are installed (same as above).
+   - Adjust the path to the saved model in `main.py`.
 
-This model have 92% validation accuracy and 96% percent train accuracy
+2. **Run the Web App**:
+   - Open Command Prompt or Windows PowerShell.
+   - Navigate to the project directory.
+   - Start the Streamlit app with:
+     ```bash
+     streamlit run main.py
+     ```
+   - This command will start a local server, and you can interact with the app through your web browser.
+
+### Model Performance
+
+- **Validation Accuracy**: 92%
+- **Training Accuracy**: 96%
